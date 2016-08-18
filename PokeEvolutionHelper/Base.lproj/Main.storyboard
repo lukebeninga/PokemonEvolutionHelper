@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PokeEvolutionHelper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AuJ-gy-mQh">
+                                <rect key="frame" x="20" y="65" width="560" height="216"/>
+                                <color key="backgroundColor" red="0.96470588235294119" green="0.97647058823529409" blue="0.2627450980392157" alpha="1" colorSpace="calibratedRGB"/>
+                            </pickerView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z7G-4N-u7r">
+                                <rect key="frame" x="20" y="318" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <action selector="Evolve:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Oyb-4Z-0ji"/>
+                                    <action selector="getVal:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="QBz-Iu-nnW"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Evolution Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wXX-id-EO4">
+                                <rect key="frame" x="177" y="28" width="247" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Enter Current CP:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4C2-S6-yje">
+                                <rect key="frame" x="20" y="279" width="135" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqT-Z7-GO3">
+                                <rect key="frame" x="278" y="413" width="45" height="30"/>
+                                <state key="normal" title="Evolve"/>
+                                <connections>
+                                    <action selector="evolveButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SCX-wa-tiZ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OSp-eq-M3q">
+                                <rect key="frame" x="279" y="494" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98197292124877211" green="1" blue="0.3269210969528068" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="AuJ-gy-mQh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="3EZ-b9-b3A"/>
+                            <constraint firstItem="AuJ-gy-mQh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4Pg-t5-rDI"/>
+                            <constraint firstItem="OSp-eq-M3q" firstAttribute="top" secondItem="hqT-Z7-GO3" secondAttribute="bottom" constant="51" id="8VI-fW-K7a"/>
+                            <constraint firstItem="z7G-4N-u7r" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="GVe-RO-Xka"/>
+                            <constraint firstItem="OSp-eq-M3q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NdX-O8-O5e"/>
+                            <constraint firstItem="AuJ-gy-mQh" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="QI5-54-2el"/>
+                            <constraint firstItem="wXX-id-EO4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SXn-xp-BHf"/>
+                            <constraint firstItem="z7G-4N-u7r" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="TLM-lD-X4s"/>
+                            <constraint firstItem="AuJ-gy-mQh" firstAttribute="top" secondItem="wXX-id-EO4" secondAttribute="bottom" constant="3" id="UMi-Jq-F8d"/>
+                            <constraint firstItem="hqT-Z7-GO3" firstAttribute="top" secondItem="z7G-4N-u7r" secondAttribute="bottom" constant="65" id="UYI-E2-hUI"/>
+                            <constraint firstItem="AuJ-gy-mQh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="45" id="UdC-5T-XDs"/>
+                            <constraint firstItem="z7G-4N-u7r" firstAttribute="top" secondItem="AuJ-gy-mQh" secondAttribute="bottom" constant="37" id="bAG-Fz-IEY"/>
+                            <constraint firstItem="hqT-Z7-GO3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bGA-Xv-bne"/>
+                            <constraint firstItem="AuJ-gy-mQh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="hQm-N8-Ekg"/>
+                            <constraint firstItem="z7G-4N-u7r" firstAttribute="centerX" secondItem="AuJ-gy-mQh" secondAttribute="centerX" id="iuT-Ni-7FE"/>
+                            <constraint firstItem="AuJ-gy-mQh" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="p3y-E8-FW0"/>
+                            <constraint firstItem="4C2-S6-yje" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="rBb-db-4g6"/>
+                            <constraint firstItem="wXX-id-EO4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="zcU-oo-mgE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="field" destination="z7G-4N-u7r" id="5Zp-wn-Hmu"/>
+                        <outlet property="myPicker" destination="AuJ-gy-mQh" id="Vd2-q8-eYL"/>
+                        <outlet property="newScore" destination="OSp-eq-M3q" id="gEG-AL-U2x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="350"/>
+        </scene>
+    </scenes>
+</document>
